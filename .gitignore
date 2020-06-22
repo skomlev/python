@@ -1,0 +1,21 @@
+# Basics
+*.py[cod]
+__pycache__
+
+
+# Logs
+*.log
+pip-log.txt
+
+
+# Local database:
+data/
+
+
+# virtual environments
+.env
+
+
+# Pycharm
+.idea
+
