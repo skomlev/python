@@ -4,6 +4,9 @@ RUN adduser -D -g '' uwsgi
 RUN mkdir /app
 ENV PYTHONPATH $PYTHONPATH:/app
 
+ENV PORT 5000
+ENV FLASK_APP myapi.py
+
 RUN apk add curl
 
 RUN apk update
@@ -12,9 +15,9 @@ RUN apk add build-base
 RUN apk add postgresql-libs
 RUN apk add --virtual .build-deps gcc musl-dev postgresql-dev libffi-dev python3-dev
 RUN pip install --upgrade pip
+
 WORKDIR /app
 ADD . /app
+
 RUN python3 -m pip install -r requirements.txt --no-cache-dir
 RUN apk --purge del .build-deps
-
-CMD su uwsgi -c 'uwsgi uwsgi.ini --thunder-lock'

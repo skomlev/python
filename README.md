@@ -3,8 +3,8 @@
 El ejercicio consiste de hacer una api con 2 tablas y armar endpoint REST para consultar,
 crear, borrar o actualizar ambas tablas. Los servicios deben responder manejando solo el *Accept: application/json*
 
-- [] Generar tablas `users` y `states`
-- [] Importar informacion del archivo `stats.csv` en la tabla `states`
+- [x] Generar tablas `users` y `states`
+- [x] Importar informacion del archivo `stats.csv` en la tabla `states`
 - [] Generar CRUD (REST) de `users`
 - [] Generar endpoint (REST) `states`
 
